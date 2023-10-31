@@ -14,8 +14,9 @@ const Home = () => {
   });
 
   return <section>
-    <div className='container mx-auto bg-gray-300'>
-      <Product products={products} category={"men's clothing"} heading={"Men's"} />
+    <div className='container mx-auto p-10 bg-[#f5f6f8]'>
+      <Product products={products} category={"men's clothing"} heading={"Shop Men's"} />
+      <Product products={products} category={"women's clothing"} heading={"Shop Women's"} />
     </div>
   </section>;
 };
