@@ -11,7 +11,12 @@ const Product = ({ products, category, heading }) => {
   <>
   <h2 className='font-bold text-lg uppercase text-center'>{heading}</h2>
   <div className='mt-4'>
-    <Swiper navigation={true} modules={[Navigation]} slidesPerView={3} spaceBetween={30}>
+    <Swiper navigation={true} modules={[Navigation]} slidesPerView={1} spaceBetween={30} breakpoints={{
+          768: {
+            slidesPerView: 3 // Show 1 product per view on screens equal to or wider than 768px
+          }
+          // Add more breakpoints if needed
+        }}>
     {filteredProducts.map(product => (
       <SwiperSlide key={product.id}>
         <div className=' h-[300px] text-left' key={product.id}>
