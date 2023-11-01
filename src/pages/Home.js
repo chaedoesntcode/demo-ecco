@@ -15,7 +15,7 @@ const Home = () => {
     return item.category === "women's clothing"
   });
 
-  return <section>
+  return <section className='pt-[100px]'>
     <div className=''>
       <Product products={products} category={"men's clothing"} heading={"Shop Men's"} />
       <Product products={products} category={"women's clothing"} heading={"Shop Women's"} />
