@@ -27,7 +27,7 @@ const Product = ({ products, category, heading }) => {
           <p className='font-semibold'>{product.title}</p>
           <p>${product.price}</p>
           <div className='pt-2 flex flex-col gap-2 items-center justify-start md:opacity-0 md:group-hover:opacity-100 transition duration-200'>
-            <button className='bg-black/80 w-full py-4 text-white hover:bg-black/70 transition'>Add to Cart</button>
+            <button className='bg-[#282828] rounded-md w-full py-4 text-white hover:bg-black/70 transition uppercase'>Add to Cart</button>
             <Link to={`/product/${product.id}`} className='underline'>View Details</Link>
           </div>
         </div>
