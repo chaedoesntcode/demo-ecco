@@ -3,6 +3,7 @@ import { ProductContext } from '../contexts/ProductContext';
 import Product from '../components/Product';
 import Support from '../components/Support';
 import Newsletter from '../components/Newsletter';
+import Hero from '../components/Hero';
 
 const Home = () => {
   const { products } = useContext(ProductContext);
@@ -16,6 +17,7 @@ const Home = () => {
   });
 
   return <section className='pt-[100px]'>
+    <Hero />
     <div className=''>
       <Product products={products} category={"men's clothing"} heading={"Shop Men's"} />
       <Product products={products} category={"women's clothing"} heading={"Shop Women's"} />
