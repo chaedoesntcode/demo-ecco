@@ -8,6 +8,10 @@
   }
 }
 
+html {
+  scroll-padding: 10rem;
+}
+
 .swiper-button-prev,
 .swiper-button-next {
   color: black !important; /* Change arrow color to black */
@@ -16,8 +20,4 @@
 
 .swiper-button-prev:after, .swiper-button-next:after {
   font-size: 1rem !important;
-}
-
-.active {
-  font-weight: bold;
 }

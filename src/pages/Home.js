@@ -4,18 +4,22 @@ import Newsletter from '../components/Newsletter';
 import Hero from '../components/Hero';
 import Filter from '../components/Filter';
 
-const Home = () => {
-  
+const Home = ({activeTab}) => {
+   
 
   return <section className='pt-[100px]'>
-    <Hero />
-    <div className=''>
+    <Hero activeTab={activeTab} />
+    <Filter activeTab={activeTab} />
+    <Support />
+    {/* <Filter activeTab={activeTab} /> */}
+
+    {/* <div className=''>
       <Filter />
-      <Support />
+      
       <div className='block md:hidden'>
       <Newsletter />
       </div>
-    </div>
+    </div> */}
   </section>;
 };
 
