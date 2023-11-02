@@ -10,6 +10,7 @@ const Home = ({activeTab}) => {
   return <section className='pt-[100px]'>
     <Hero activeTab={activeTab} />
     <Filter activeTab={activeTab} />
+    <Newsletter />
     <Support />
     {/* <Filter activeTab={activeTab} /> */}
 
