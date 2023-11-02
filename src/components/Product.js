@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import { Navigation } from 'swiper/modules';
 import { Link } from 'react-router-dom';
+import { CartContext } from '../contexts/CartContext';
 
 const Product = ({ products, category, heading }) => {
+  const {addToCart} = useContext(CartContext);
+
   const filteredProducts = products.filter(item => item.category === category);
   console.log(filteredProducts)
   return (
@@ -27,7 +30,7 @@ const Product = ({ products, category, heading }) => {
           <p className='font-semibold'>{product.title}</p>
           <p>${product.price}</p>
           <div className='pt-2 flex flex-col gap-2 items-center justify-start md:opacity-0 md:group-hover:opacity-100 transition duration-200'>
-            <button className='bg-[#282828] rounded-md w-full py-4 text-white hover:bg-black/70 transition uppercase'>Add to Cart</button>
+            <button onClick={() => addToCart(product, product.id)} className='bg-[#282828] rounded-md w-full py-4 text-white hover:bg-black/70 transition uppercase'>Add to Cart</button>
             <Link to={`/product/${product.id}`} className='underline'>View Details</Link>
           </div>
         </div>
