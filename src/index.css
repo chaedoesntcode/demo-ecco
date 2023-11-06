@@ -21,3 +21,13 @@ html {
 .swiper-button-prev:after, .swiper-button-next:after {
   font-size: 1rem !important;
 }
+
+.cart {
+  overflow-y: scroll;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}

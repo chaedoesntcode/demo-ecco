@@ -25,7 +25,7 @@ const Hero = ({ activeTab }) => {
   return <section>
     <div className='bg-[#f5f5f5] bg-center bg-cover  flex flex-col justify-end text-white p-2' style={{ ...divStyle, height: 'calc(100vh - 128px)' }}>
       <h2 className='text-4xl uppercase'>Unveiling Timeless Elegance</h2>
-      <Link to='/' className='underline' onClick={scrollToNextSection}>Shop Now</Link>
+      <Link to={`/${activeTab}`} className='underline' onClick={scrollToNextSection}>Shop Now</Link>
     </div>
     
   </section>;
