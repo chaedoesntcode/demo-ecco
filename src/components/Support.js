@@ -3,7 +3,7 @@ import { BsBag, BsQuestionCircle, BsChat } from 'react-icons/bs'
 
 const Support = () => {
   return (
-    <div className='mt-10 grid grid-cols-1 px-5 md:grid-cols-3  md:gap-4'>
+    <div className='my-10 grid grid-cols-1 px-5 md:grid-cols-3  md:gap-4'>
         <div className='p-10 hover:cursor-pointer hover:bg-[#f2f2f2] rounded-md transition text-center flex flex-col items-center'>
             <BsBag className='text-4xl mb-3'/>
             <h3 className='font-semibold'>HOW TO SHOP</h3>
