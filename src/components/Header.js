@@ -29,7 +29,7 @@ const Header = ({activeTab, handleTabClick}) => {
         <div className='flex justify-center items-center md:gap-4'>
           <div  onClick={() => setIsOpen(!isOpen)} className='cursor-pointer hover:bg-[#f2f2f2] p-2 rounded-md transition'>
             <AiOutlineShopping className='text-4xl'/>
-            <div className='absolute top-[30px] right-[105px] text-xs w-[20px] h-[20px] flex justify-center items-center bg-[#282828] text-white rounded-full'>{itemQty}</div>
+            <div className='absolute top-[30px] right-[70px] md:top-[30px] md:right-[105px] text-xs w-[20px] h-[20px] flex justify-center items-center bg-[#282828] text-white rounded-full'>{itemQty}</div>
           </div>
           <div className='cursor-pointer hover:bg-[#f2f2f2] p-2 rounded-md transition'>
            <AiOutlineGlobal className='text-3xl '/>
