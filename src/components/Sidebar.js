@@ -27,7 +27,7 @@ const Sidebar = () => {
           <Link to={'/shopping-bag'} onClick={handleClose}>View bag ({itemQty})</Link>
           <p className='font-semibold'>Subtotal: ${subtotal}</p>
           </div>
-          <button className='bg-black/80 w-full py-4 text-white hover:bg-black/70 transition uppercase'>Checkout</button>
+          <button className='bg-[#282828] w-full py-4 text-white hover:bg-[#282828]/70 transition uppercase'>Checkout</button>
         </div>
       </div>
     </div>
