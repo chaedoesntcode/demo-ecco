@@ -31,7 +31,6 @@ const ProductDetails = () => {
         </div>
         <div className='md:w-1/3'>
           <div className='hidden md:flex flex-col'>
-            <p>reviews</p>
             <p className='font-semibold'>{product.title}</p>
             <p>${product.price}</p>
           </div>

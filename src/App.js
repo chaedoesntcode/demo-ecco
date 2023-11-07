@@ -8,6 +8,7 @@ import Sidebar from './components/Sidebar';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import ShoppingBag from './pages/ShoppingBag';
+import ScrollToTop from './components/ScrollToTop';
 
 const App = () => {
   const [activeTab, setActiveTab] = useState("women");
@@ -20,8 +21,8 @@ const App = () => {
 
   return <div className='overflow-hidden'>
     <BrowserRouter>
+      <ScrollToTop />
       <Header handleTabClick={handleTabClick} activeTab={activeTab} />
-
       <Routes>
         <Route  path={`/${activeTab}`} element={<Home activeTab={activeTab}/>} />
         <Route exact path='/product/:id' element={<ProductDetails />} />
