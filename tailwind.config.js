@@ -23,6 +23,7 @@ module.exports = {
       },
       backgroundImage: {
         hero: "url('./img/woman_hero.jpg')",
+        about: "url('./img/aboutus.jpg')",
       },
       backgroundSize: {
         'cover': 'cover', 

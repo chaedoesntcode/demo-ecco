@@ -21,7 +21,6 @@ const ProductDetails = () => {
   }
 
   if (!product) {
-    // Product data is not available, you might want to show a loading indicator or handle this case
     return <div className='h-screen'>Loading...</div>;
   }
 
