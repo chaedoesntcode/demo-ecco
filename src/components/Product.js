@@ -22,17 +22,22 @@ const Product = ({ products, category, heading }) => {
         }}>
     {filteredProducts.map(product => (
       <SwiperSlide key={product.id}>
-        <div className='group min-h-[300px] text-center relative' key={product.id}>
+        <div className='group min-h-[300px] relative' key={product.id}>
+        <Link to={`/product/${product.id}`} className=''>
           <div className='h-[200px] mb-2 py-4 bg-red bg-white  flex justify-center items-center'>
             <img src={product.image} className='object-fit h-full group-hover:scale-110 transition duration-200'/>
           </div>
-          
-          <p className='font-semibold'>{product.title}</p>
-          <p>${product.price}</p>
-          <div className='pt-2 flex flex-col gap-2 items-center justify-start md:opacity-0 md:group-hover:opacity-100 transition duration-200'>
-            <button onClick={() => addToCart(product, product.id)} className='bg-[#282828] rounded-md w-full py-4 text-white hover:bg-black/70 transition uppercase'>Add to Cart</button>
-            <Link to={`/product/${product.id}`} className='underline'>View Details</Link>
+          <div className='w-3/4 mx-auto'>
+            <p className='font-semibold'>{product.title}</p>
+            <p>${product.price}</p>
+            <p>reviews</p>
           </div>
+
+
+          <div className='pt-2 flex flex-col gap-2 items-center justify-start md:opacity-0 md:group-hover:opacity-100 transition duration-200'>
+            {/* <button onClick={() => addToCart(product, product.id)} className='bg-[#282828] rounded-md w-full py-4 text-white hover:bg-black/70 transition uppercase'>Add to Cart</button> */}
+          </div>
+          </Link>
         </div>
       </SwiperSlide>
     ))}
