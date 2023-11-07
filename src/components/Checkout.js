@@ -1,4 +1,4 @@
-import React, {useContext} from 'react'
+import React, {useContext, useState} from 'react'
 import AmEx from '../img/payments/AmEx.png'
 import ApplePay from '../img/payments/ApplePay.png'
 import Mastercard from '../img/payments/Mastercard.png'
@@ -7,9 +7,10 @@ import Visa from '../img/payments/Visa.png'
 import Affirm from '../img/payments/Affirm.svg'
 import Klarna from '../img/payments/Klarna.svg'
 import { CartContext } from '../contexts/CartContext'
+import CheckoutButton from './CheckoutButton'
 
 const Checkout = () => {
-  const { subtotal } = useContext(CartContext)
+  const { subtotal } = useContext(CartContext);
 
   return (
     <>
@@ -27,7 +28,7 @@ const Checkout = () => {
             <p>Order Subtotal</p>
             <p>${subtotal}</p>
         </div>
-        <button className=' bg-[#282828] w-full my-4 py-4 text-white hover:bg-[#282828]/70 transition uppercase'>Checkout</button>
+        <CheckoutButton />
         <div className='flex flex-col text-center'>
             <p className='text-sm text-black/60'>Accepted payment methods</p>
             <div className='flex justify-center gap-2'>

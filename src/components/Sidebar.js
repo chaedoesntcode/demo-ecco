@@ -5,6 +5,7 @@ import { BsXLg } from 'react-icons/bs'
 import CartItem from '../components/CartItem'
 import { SidebarContext } from '../contexts/SidebarContext';
 import { CartContext } from '../contexts/CartContext';
+import CheckoutButton from './CheckoutButton';
 
 const Sidebar = () => {
   const { isOpen, handleClose } = useContext(SidebarContext)
@@ -27,7 +28,7 @@ const Sidebar = () => {
           <Link to={'/shopping-bag'} onClick={handleClose}>View bag ({itemQty})</Link>
           <p className='font-semibold'>Subtotal: ${subtotal}</p>
           </div>
-          <button className='bg-[#282828] w-full py-4 text-white hover:bg-[#282828]/70 transition uppercase'>Checkout</button>
+          <CheckoutButton />
         </div>
       </div>
     </div>
