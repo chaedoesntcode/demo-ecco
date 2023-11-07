@@ -27,8 +27,7 @@ const Product = ({ products, category, heading }) => {
           </div>
           <div className='w-3/4 mx-auto'>
             <p className='font-semibold'>{product.title}</p>
-            <p>${product.price}</p>
-            <p>reviews</p>
+            <p>${product.price.toFixed(2)}</p>
           </div>
           </Link>
         </div>

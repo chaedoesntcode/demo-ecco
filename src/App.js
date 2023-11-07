@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { BrowserRouter, Route, Routes, useNavigate } from 'react-router-dom';
 
 import Home from './pages/Home';
 import ProductDetails from './pages/ProductDetails';
@@ -25,7 +25,8 @@ const App = () => {
       <ScrollToTop />
       <Header handleTabClick={handleTabClick} activeTab={activeTab} />
       <Routes>
-        <Route  path={`/${activeTab}`} element={<Home activeTab={activeTab}/>} />
+        <Route  path='/' element={<Home activeTab={"women"}/>} />
+        <Route  path='/:activeTab' element={<Home activeTab={activeTab}/>} />
         <Route exact path='/product/:id' element={<ProductDetails />} />
         <Route exact setActiveTab={null} path='/shopping-bag' element={<ShoppingBag setActiveTab={setActiveTab}/>} />
       </Routes>

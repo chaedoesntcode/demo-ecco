@@ -20,11 +20,16 @@ const ProductDetails = () => {
     triggerOpen();
   }
 
+  if (!product) {
+    // Product data is not available, you might want to show a loading indicator or handle this case
+    return <div className='h-screen'>Loading...</div>;
+  }
+
   return <div className='pt-[141px] md:pt-[100px]'>
     <div className='flex flex-col items-center justify-center gap-x-10 gap-y-2 md:flex-row px-4 py-10 h-full md:h-[90vh]'>
         <div className='md:hidden'>
           <p className='font-semibold'>{product.title}</p>
-          <p>${product.price}</p>
+          <p>${product.price.toFixed(2)}</p>
         </div>
         <div className=''>
             <img src={product.image} className='object-fit max-w-[300px] lg:max-w-[250px]'/>
@@ -32,7 +37,7 @@ const ProductDetails = () => {
         <div className='md:w-1/3'>
           <div className='hidden md:flex flex-col'>
             <p className='font-semibold'>{product.title}</p>
-            <p>${product.price}</p>
+            <p>${product.price.toFixed(2)}</p>
           </div>
           <p className='text-sm mt-3'>{product.description}</p>
           <button onClick={() => handleAddToCart(product, product.id)} className='bg-[#282828] mt-4 w-full py-4 text-white hover:bg-black/70 transition uppercase'>Add to Cart</button>
