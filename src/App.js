@@ -9,6 +9,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import ShoppingBag from './pages/ShoppingBag';
 import ScrollToTop from './components/ScrollToTop';
+import BackToTop from './components/BackToTop';
 
 const App = () => {
   const [activeTab, setActiveTab] = useState("women");
@@ -29,6 +30,7 @@ const App = () => {
         <Route exact setActiveTab={null} path='/shopping-bag' element={<ShoppingBag setActiveTab={setActiveTab}/>} />
       </Routes>
       <Sidebar />
+      <BackToTop />
       <Footer />
     </BrowserRouter>
   </div>;
