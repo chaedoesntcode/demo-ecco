@@ -7,8 +7,6 @@ import { Link } from 'react-router-dom';
 import { CartContext } from '../contexts/CartContext';
 
 const Product = ({ products, category, heading }) => {
-  const {addToCart} = useContext(CartContext);
-
   const filteredProducts = products.filter(item => item.category === category);
   console.log(filteredProducts)
   return (
@@ -31,11 +29,6 @@ const Product = ({ products, category, heading }) => {
             <p className='font-semibold'>{product.title}</p>
             <p>${product.price}</p>
             <p>reviews</p>
-          </div>
-
-
-          <div className='pt-2 flex flex-col gap-2 items-center justify-start md:opacity-0 md:group-hover:opacity-100 transition duration-200'>
-            {/* <button onClick={() => addToCart(product, product.id)} className='bg-[#282828] rounded-md w-full py-4 text-white hover:bg-black/70 transition uppercase'>Add to Cart</button> */}
           </div>
           </Link>
         </div>

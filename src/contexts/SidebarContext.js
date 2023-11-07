@@ -8,7 +8,11 @@ const SidebarProvider = ({children}) => {
     setIsOpen(false);
   }
 
-  return <SidebarContext.Provider value={{isOpen, setIsOpen, handleClose}}>
+  const triggerOpen = () => {
+    setIsOpen(true);
+  }
+
+  return <SidebarContext.Provider value={{isOpen, setIsOpen, handleClose, triggerOpen}}>
     {children}
   </SidebarContext.Provider>;
 };
