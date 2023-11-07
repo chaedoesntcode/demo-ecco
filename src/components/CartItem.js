@@ -6,6 +6,7 @@ const CartItem = ({item}) => {
   const { removeItem, increaseQty, decreaseQty } = useContext(CartContext);
 
   const { id, title, image, price, quantity }  = item;
+
   return <div>
       <div className='px-5 w-full min-h-[150px] flex gap-x-2 items-center border-b border-[#f2f2f2] py-2'>
         <Link to={`/product/${id}`}>

@@ -19,11 +19,16 @@ const Sidebar = () => {
           <BsXLg className='text-1xl right-4'/>
         </div>
         <div className='cart h-full'>
+          {cart.length === 0 && (
+          <div className='text-center h-full w-full flex justify-center items-center'>
+            <p>Your shopping bag is empty.</p>
+          </div>
+          )}
           {cart.map(item => {
             return <CartItem item={item} key={item.id}/>
           })}
         </div>
-        <div className='border-t border-black w-full py-5 px-5'>
+        <div className='border-t border-[#282828]/60 w-full py-5 px-5'>
           <div className='flex justify-between mb-3'>
           <Link to={'/shopping-bag'} onClick={handleClose}>View bag ({itemQty})</Link>
           <p className='font-semibold'>Subtotal: ${subtotal}</p>
