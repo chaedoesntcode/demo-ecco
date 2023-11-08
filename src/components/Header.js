@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import { SidebarContext } from '../contexts/SidebarContext';
 import { CartContext } from '../contexts/CartContext';
 import { AiOutlineShopping } from 'react-icons/ai'
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import UserDropdown from './UserDropdown';
 
 const Header = ({activeTab, handleTabClick}) => {
@@ -10,6 +10,9 @@ const Header = ({activeTab, handleTabClick}) => {
   const { itemQty } = useContext(CartContext);
 
   const [ isActive, setIsActive ] = useState(false);
+  const location = useLocation();
+  const { pathname } = location;
+
   useEffect(() => {
     window.addEventListener('scroll', () => {
       window.scrollY > 30 ? setIsActive(true) : setIsActive(false);
@@ -23,8 +26,8 @@ const Header = ({activeTab, handleTabClick}) => {
     <div className={`${isActive ? 'border-b shadow-sm border-secondary fixed top-0' : 'absolute'} bg-white transition-all z-40 w-full`}>
       <div className='px-5 md:px-10 h-[100px] flex justify-between items-center'>
           <div className='hidden md:flex gap-4'>
-            <Link to='/women' onClick={() => handleTabClick("women")} style={{ fontWeight: activeTab === 'women' ? '700' : 'normal' }} className='hover:bg-secondary p-3 rounded-md transition'>Women</Link>
-            <Link to='/men' onClick={() => handleTabClick("men")} style={{ fontWeight: activeTab === 'men' ? '700' : 'normal' }} className='hover:bg-secondary p-3 rounded-md transition'>Men</Link>
+            <Link to='/women' onClick={() => handleTabClick("women")} style={{ fontWeight: pathname === '/women' ? '700' : 'normal' }} className='hover:bg-secondary p-3 rounded-md transition'>Women</Link>
+            <Link to='/men' onClick={() => handleTabClick("men")} style={{ fontWeight: pathname === '/men' ? '700' : 'normal' }} className='hover:bg-secondary p-3 rounded-md transition'>Men</Link>
           </div>
           <Link  to='/women' onClick={() => handleTabClick("women")} className='h2'>DemoEcco</Link>
         <div className='flex justify-center items-center gap-2 md:gap-4'>
