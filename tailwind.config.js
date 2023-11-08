@@ -2,7 +2,8 @@ module.exports = {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
     fontFamily: {
-      primary: 'Poppins',
+      primary: ['Open Sans', 'sans-serif'],
+      secondary: ['Playfair', 'serif'],
     },
     container: {
       padding: {
@@ -18,8 +19,8 @@ module.exports = {
     },
     extend: {
       colors: {
-        primary: '#222222',
-        secondary: '#F5E6E0',
+        primary: '#282828',
+        secondary: '#f2f2f2',
       },
       backgroundImage: {
         hero: "url('./img/woman_hero.jpg')",

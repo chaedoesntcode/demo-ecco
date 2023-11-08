@@ -12,6 +12,10 @@ html {
   scroll-padding: 10rem;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 .swiper-button-prev,
 .swiper-button-next {
   color: black !important; /* Change arrow color to black */
@@ -30,4 +34,19 @@ input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button { 
   -webkit-appearance: none; 
   margin: 0; 
+}
+
+@layer base {
+  .h1 {
+    @apply text-[54px] lg:text-[80px] xl:text-[98px] font-secondary font-bold capitalize leading-[120%] tracking-[-0.05em];
+  }
+  .h2 {
+    @apply text-[36px] lg:text-[56px] font-bold leading-tight font-secondary;
+  }
+  .h3 {
+    @apply text-[26px] lg:text-[28px] mb-2 font-secondary;
+  }
+  .topBtn {
+    @apply bg-white hover:cursor-pointer rounded-full shadow-md fixed flex justify-center items-center z-40 h-[50px] w-[50px] bottom-5 right-5 md:bottom-10 md:right-10;
+  }
 }

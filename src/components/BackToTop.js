@@ -29,7 +29,7 @@ const BackToTop = () => {
     
   return ( 
   <>
-    {backToTop && (<div  onClick={scrollToTop} className='bg-white hover:cursor-pointer rounded-full shadow-md fixed flex justify-center items-center z-40 h-[50px] w-[50px] bottom-5 right-5 md:bottom-10 md:right-10'>
+    {backToTop && (<div  onClick={scrollToTop} className='topBtn'>
         <BiChevronUp className='text-4xl'/>
     </div> )}
     </>

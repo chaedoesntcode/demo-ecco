@@ -3,6 +3,7 @@ import { CartContext } from '../contexts/CartContext';
 import { ProductContext } from '../contexts/ProductContext';
 import { SidebarContext } from '../contexts/SidebarContext';
 import { useParams } from 'react-router-dom';
+import StarRating from '../components/StarRating';
 
 const ProductDetails = () => {
   const {id} = useParams();
@@ -27,15 +28,17 @@ const ProductDetails = () => {
   return <div className='pt-[141px] md:pt-[100px]'>
     <div className='flex flex-col items-center justify-center gap-x-10 gap-y-2 md:flex-row px-4 py-10 h-full md:h-[90vh]'>
         <div className='md:hidden'>
-          <p className='font-semibold'>{product.title}</p>
+          <StarRating rating={product.rating.rate} count={product.rating.count} />
+          <p className='font-semibold h2'>{product.title}</p>
           <p>${product.price.toFixed(2)}</p>
         </div>
         <div className=''>
-            <img src={product.image} className='object-fit max-w-[300px] lg:max-w-[250px]'/>
+            <img src={product.image} alt={product.title} className='object-fit max-w-[300px] lg:max-w-[250px]'/>
         </div>
         <div className='md:w-1/3'>
           <div className='hidden md:flex flex-col'>
-            <p className='font-semibold'>{product.title}</p>
+            <StarRating rating={product.rating.rate} count={product.rating.count} />
+            <p className='font-semibold h3'>{product.title}</p>
             <p>${product.price.toFixed(2)}</p>
           </div>
           <p className='text-sm mt-3'>{product.description}</p>
