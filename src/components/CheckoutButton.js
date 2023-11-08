@@ -6,7 +6,7 @@ const CheckoutButton = () => {
   
   return (
     <div className='relative flex justify-center'>
-        <Tooltip arrow title="This site is for Front-End demonstration purposes only. Checkout is not functional." placement="top">
+        <Tooltip arrow title="This site is for Front-End demonstration purposes only. Checkout is not functional." placement="top" enterTouchDelay={0}>
         <Button variant="contained" sx={{
           background: '#282828',
           width: '100%',

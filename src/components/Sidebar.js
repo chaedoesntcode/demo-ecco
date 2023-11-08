@@ -12,8 +12,8 @@ const Sidebar = () => {
   const { cart, itemQty, subtotal } = useContext(CartContext)
 
   return <div className={`${isOpen ? 'bg-black/20 w-full h-full z-50' : 'bg-transparent'} top-0 fixed transition-all duration-300`}>
-    <div className={`${isOpen ? 'right-0' : '-right-full'} top-0 z-40  transition-all duration-300 w-full h-full md:w-[40vw] xl:w-[30vw] flex flex-col justify-between bg-white fixed`}>
-      <div className='h-screen flex justify-between flex-col'>
+    <div className={`${isOpen ? 'right-0' : '-right-full'} top-0 z-40 h-screen transition-all duration-300 w-full md:w-[40vw] xl:w-[30vw] flex flex-col justify-between bg-white fixed`}>
+      <div className=' flex h-[85%] md:h-full justify-between flex-col'>
         <div onClick={handleClose} className='px-5 cursor-pointer py-6 flex justify-between'>
           <p className='text-3xl font-secondary'>Shopping Bag</p>
           <BsXLg className='text-1xl right-4'/>

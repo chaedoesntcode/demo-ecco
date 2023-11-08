@@ -36,13 +36,19 @@ const UserDropdown = () => {
 
   return (
     <div className='relative'>
-      <div onClick={handleUserIconClick}>
+      {!dropdownVisible && (
+      <div onClick={handleUserIconClick} className='cursor-pointer hover:bg-secondary p-2 rounded-md transition'> 
         <AiOutlineUser className='text-4xl cursor-pointer' />
       </div>
-
+      )}
       {dropdownVisible && (
-        <div ref={dropdownRef} className="absolute bg-white top-12 right-0 w-[300px] py-10 px-4 rounded-md shadow-xl">
-          <Tooltip arrow title="This site is for Front-End demonstration purposes only. Sign in is not functional." placement="bottom">
+        <>
+        <div onClick={handleUserIconClick} className='bg-secondary cursor-pointer p-2 rounded-t-md transition'> 
+          <AiOutlineUser className='text-4xl cursor-pointer' />
+        </div>
+        <div ref={dropdownRef} className="absolute bg-secondary top-[50px] right-0 w-[300px] py-10 px-4 rounded-tl-md rounded-b-md shadow-xl text-center">
+          <p className='text-sm text-black/80 mb-4'>Sign in to save items to your wishlists, track your orders, and check out faster!</p>
+          <Tooltip arrow title="This site is for Front-End demonstration purposes only. Sign in is not functional." placement="bottom" enterTouchDelay={0}>
             <Button variant="contained" sx={{
                 background: '#282828',
                 width: '100%',
@@ -54,8 +60,9 @@ const UserDropdown = () => {
                 textTransform: 'uppercase',
             }}>Sign In</Button>
             </Tooltip>
-          <p className='mt-4 text-sm text-black/60'>Don't have an account? Sign Up</p>
+          <p className='mt-4 text-sm text-black/80'>Don't have an account? Sign Up</p>
         </div>
+        </>
       )}
     </div>
   )

@@ -17,7 +17,7 @@ const CartItem = ({item}) => {
           <div className='flex justify-between'>
             <div className=''>
               <button onClick={() => decreaseQty(id)} className='border h-10 w-10 hover:bg-secondary transition'>-</button>
-              <input className='border-t border-b h-10 w-10 text-center' disabled type='number' min='1' value={quantity !== undefined ? quantity : 0} onChange={(e) => {e.target.value = quantity}}/>
+              <input className='border-t border-b h-10 w-10 text-center' disabled type='number' min='1' value={quantity !== undefined ? quantity : 0} onChange={(e) => {e.target.value = quantity}} style={{ color: '#000', opacity: 0.9, borderRadius: '0' }}/>
               <button onClick={() => increaseQty(id)}  className='hover:bg-secondary transition border h-10 w-10'>+</button>
             </div>
             <div className='flex gap justify-center'>       

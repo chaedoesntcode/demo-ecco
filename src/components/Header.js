@@ -35,14 +35,14 @@ const Header = ({activeTab, handleTabClick}) => {
             <AiOutlineShopping className='text-4xl'/>
             <div className='absolute top-2 right-[2px] text-xs w-[20px] h-[20px] flex justify-center items-center bg-primary text-white rounded-full'>{itemQty}</div>
           </div>
-          <div className='cursor-pointer hover:bg-secondary p-2 rounded-md transition'>
+          <div>
             <UserDropdown />
           </div>
         </div>
       </div>
       <div className='flex md:hidden py-2 justify-center gap-4 border-t border-secondary'>
-            <Link to='/women' onClick={() => handleTabClick("women")} style={{ fontWeight: activeTab === 'women' ? '700' : 'normal' }}>Women</Link>
-            <Link to='/men' onClick={() => handleTabClick("men")} style={{ fontWeight: activeTab === 'men' ? '700' : 'normal' }}>Men</Link>
+            <Link to='/women' onClick={() => handleTabClick("women")} style={{ fontWeight: pathname === '/women' ? '700' : 'normal' }}>Women</Link>
+            <Link to='/men' onClick={() => handleTabClick("men")} style={{ fontWeight: pathname === '/men' ? '700' : 'normal' }}>Men</Link>
       </div>
     </div>
   </header>
