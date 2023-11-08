@@ -11,7 +11,7 @@ A site for a fictional e-commerce store designed and developed by me.
 
 
 ### Deployment
-You can access the deployed version here: 
+You can access the deployed version here: [https://demoecco.netlify.app](https://demoecco.netlify.app).
 
 
 
